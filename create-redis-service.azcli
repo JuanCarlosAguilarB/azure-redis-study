@@ -1,0 +1,14 @@
+# create a resource group
+az group create --resource-group <NameOfResourceGroup> --location eastus2
+# or
+az group create -l eastus2 -n <NameOfResourceGroup>
+
+# create a redis cache service
+az redis create --name <NameOfResourceGroup> --location eastus2 \
+--resource-group <NameOfResourceGroup> \
+--sku Basic \ #a sku is a stock keeping unit, a unique identifier for a product
+--vm-size c0 # size of machine to run redis on
+
+# list redis caches of a resource group
+az redis list --resource-group <NameOfResourceGroup>
+
